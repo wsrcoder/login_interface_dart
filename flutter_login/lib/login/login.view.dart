@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login/login/widgets/email_field.widget.dart';
 import 'package:flutter_login/login/widgets/login_button.widget.dart';
+import 'package:flutter_login/login/widgets/password_field.widget.dart';
 
 class LoginView extends StatelessWidget{
   const LoginView( {super.key} );
@@ -21,7 +23,17 @@ class LoginView extends StatelessWidget{
   {
     return Center(
       child: ListView(
-          children: [Text('ddddd'), LoginButton()],
+        shrinkWrap: true,
+        padding: const EdgeInsets.all(12),
+          children: const [
+                            SizedBox(height: 50),
+                            EmailField(), 
+                            SizedBox(height: 7),
+                            PasswordField(),
+                            SizedBox(height: 40),
+                            Divider(), 
+                            LoginButton(),
+                          ],
       )
     );
     
