@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_login/login/login.view.dart';
 
 void main()
 {
-  runApp(
-    MaterialApp(
-      title: 'flutter demo',
-      home: Scaffold(
-        appBar: AppBar(),
-        drawer: Drawer(),
+  runApp(const MyApp());
 
-        body: Center(
-          child: const Text('hello world'),
-        ),
-  
+}
 
-      )
-    )
-  );
+class MyApp extends StatelessWidget
+{
+  const MyApp({super.key});
 
+  @override 
+  Widget build(BuildContext context)
+  {
+    return MaterialApp(
+      title: 'Tela de Login',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const LoginView(),
+    );
+  }
 }
